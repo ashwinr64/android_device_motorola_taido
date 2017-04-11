@@ -1,1 +1,3 @@
 unix_socket_connect(radio, rild, ril-daemon-mtk)
+allow radio swver_prop:property_service set;
+

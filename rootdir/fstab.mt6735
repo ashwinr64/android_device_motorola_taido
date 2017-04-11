@@ -28,3 +28,5 @@
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/expdb         /expdb          emmc  defaults defaults
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/secro         /secro          emmc  defaults defaults
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/seccfg        /seccfg         emmc  defaults defaults
+/dev/block/zram0                             none         swap    defaults      zramsize=419430400,zramstreams=3
+

@@ -14,8 +14,15 @@ persist.radio.fd.counter=15
 persist.radio.fd.off.counter=5
 persist.radio.fd.r8.counter=15
 persist.radio.fd.off.r8.counter=5
+ro.telephony.default_network=9
 
 ro.telephony.ril_class=MT6735
+
+# USB
+ro.usb.vid=2970
+
+# IO Scheduler
+sys.io.scheduler=bfq
 
 # Wifi
 wifi.interface=wlan0
@@ -24,6 +31,19 @@ wifi.direct.interface=p2p0
 
 # Graphics
 ro.opengles.version=196608
+ro.sf.lcd_density=320
 
 # FRP
 ro.frp.pst=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/frp
+
+# memory trim
+ro.sys.fw.use_trim_settings=true
+ro.sys.fw.empty_app_percent=50
+ro.sys.fw.trim_empty_percent=100
+ro.sys.fw.trim_cache_percent=100
+ro.sys.fw.trim_enable_memory=1073741824
+
+ro.config.max_starting_bg=3
+
+# use 3 threads max for dex2oat
+ro.sys.fw.dex2oat_thread_count=3

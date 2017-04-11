@@ -1,0 +1,3 @@
+add_lunch_combo lineage_taido-user
+add_lunch_combo lineage_taido-userdebug
+add_lunch_combo lineage_taido-eng

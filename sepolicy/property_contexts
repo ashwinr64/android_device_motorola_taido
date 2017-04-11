@@ -22,3 +22,4 @@ af.                 u:object_r:audiohal_prop:s0
 persist.af.         u:object_r:audiohal_prop:s0
 ril.mux.report.case u:object_r:ril_mux_report_case_prop:s0
 vold.encryption.type u:object_r:vold_encryption_type_prop:s0
+sw.version          u:object_r:swver_prop:s0
