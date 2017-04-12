@@ -14,14 +14,12 @@ lib/libmdloggerrecycle.so
 lib/libmemoryDumpEncoder.so
 lib/libmrdump.so
 lib/librilmtk.so
-lib64/libterservice.so
+lib/libterservice.so
 lib/mtk-ril.so
 etc/ecc_list.xml
 etc/firmware/catcher_filter_1_lwg_n.bin
 etc/firmware/dsp_1_lwg_n.bin
-etc/firmware/dsp_1_lwg_n.bin_freeB28
 etc/firmware/modem_1_lwg_n.img
-etc/firmware/modem_1_lwg_n.img_freeB28
 
 # Sensors
 bin/AcdApiDaemon
@@ -30,16 +28,12 @@ bin/akmd8963
 bin/akmd8975
 bin/ami304d
 bin/bmm050d
-bin/bmm056d
 bin/geomagneticd
 bin/mc6420d
-bin/mc64xxd
 bin/memsicd
 bin/memsicd3416x
-bin/mpud6050
 bin/msensord
 bin/orientationd
-bin/qmc5983d
 bin/s62xd
 lib/hw/sensors.mt6735m.so
 lib/libhwm.so
@@ -81,7 +75,7 @@ lib/libgralloc_extra.so
 lib/libgui_ext.so
 lib/libgpu_aux.so
 lib/libion_mtk.so
-lib64/libpq_cust.so
+lib/libpq_cust.so
 lib/libpq_prot.so
 lib/libpqservice.so
 lib/libui_ext.so
@@ -109,49 +103,85 @@ etc/firmware/mt6627/mt6627_fm_v5_patch.bin
 etc/fmr/mt6627_fm_cust.cfg
 
 # Camera
-lib/libcamera_client_mtk.so
 lib/hw/camera.mt6735m.so
-lib/hw/mmsdk.default.so
-lib64/libacdk.so
+lib/lib3a.so
+lib/libJniAtvService.so
+lib/libLeConvertDataToTexture.so
+lib/liba3m.so
+lib/libacdk.so
+lib/libblas.so
 lib/libcam.camadapter.so
-lib/libcam.camnode.so
+lib/libcam.campipe.so
 lib/libcam.camshot.so
+lib/libcam.client.so
 lib/libcam.device1.so
 lib/libcam.device3.so
+lib/libcam.exif.so
+lib/libcam.exif.v3.so
+lib/libcam.hal3a.v3.dng.so
 lib/libcam.hal3a.v3.so
 lib/libcam.halsensor.so
 lib/libcam.iopipe.so
+lib/libcam.iopipe_FrmB.so
+lib/libcam.metadata.so
 lib/libcam.metadataprovider.so
 lib/libcam.paramsmgr.so
-lib/libcam3_hwnode.so
-lib/libcam_hwutils.so
-lib/libcam3_hwpipeline.so
-lib/libcam_utils.so
-lib/libcam_platform.so
-lib/libcam.client.so
+lib/libcam.sdkclient.so
+lib/libcam.utils.sensorlistener.so
+lib/libcam.utils.so
 lib/libcam1_utils.so
 lib/libcam3_app.so
+lib/libcam3_hwnode.so
+lib/libcam3_hwpipeline.so
 lib/libcam3_pipeline.so
 lib/libcam3_utils.so
-lib/libcam.common.meizu.so
-lib/libcam.exif.v3.so
-lib/libcam.utils.cpuctrl.so
-lib/libmpo.so
-lib/libmpoencoder.so
-lib/lib3a.so
-lib/lib3a_sample.so
-lib/libcam.utils.sensorlistener.so
+lib/libcam_hwutils.so
+lib/libcam_mmp.so
+lib/libcam_platform.so
+lib/libcam_utils.so
 lib/libcamalgo.so
-lib/libn3d3a.so
-lib/libsfb.so
-lib/libdngop.so
-lib/librender_engine.so
+lib/libcamdrv.so
+lib/libcamdrv_FrmB.so
+lib/libcamera_3rdalgo.so
+lib/libcamera_client.so
+lib/libcamera_metadata.so
+lib/libcameracustom.so
+lib/libcameraservice.so
+lib/libdrmmtkutil.so
+lib/libexif.so
+lib/libfeatureio.so
+lib/libfeatureiodrv.so
+lib/libhdrproc.so
+lib/libimageio.so
+lib/libimageio_FrmB.so
+lib/libimageio_plat_drv.so
+lib/libimageio_plat_drv_FrmB.so
+lib/libimg_utils.so
+lib/libimsma.so
+lib/libimsma_rtp.so
+lib/libja3m.so
+lib/libjni_mosaic.so
+lib/liblocSDK5.so
+lib/libmal.so
+lib/libmal_epdga.so
+lib/libmal_rds.so
+lib/libmmsdkservice.feature.so
+lib/libmmsdkservice.so
+lib/libmtk_drvb.so
+lib/libmtk_vt_service.so
+lib/libmtkcamera_client.so
+lib/libsink.so
+lib/libvtmal.so
+lib/libJpgDecPipe.so
+lib/libJpgEncPipe.so
+lib/libSwJpgCodec.so
+lib/libmhalImageCodec.so
+lib/libmtkjpeg.so
 
 # Media
 lib/libaudiocompensationfilter.so
 lib/libaudiocomponentengine.so
 lib/libaudiocustparam.so
-lib/libaudiopolicymanagercustom.so
 -lib/libaudiopolicymanager.so
 lib/libbessound_hd_mtk.so
 lib/libbwc.so
@@ -191,23 +221,13 @@ bin/meta_tst
 # Factory Mode
 bin/factory
 etc/factory.ini
-lib64/libminiui.so
-lib64/libacdk.so
+lib/libminiui.so
+lib/libacdk.so
 res/sound/ringtone.wav
 
 # Misc
 lib/hw/lights.mt6735m.so
 lib/hw/memtrack.mt6735m.so
-
-# MTKLogger
--app/MTKLogger/MTKLogger.apk
--bin/emdlogger1
--bin/mdlogger
--bin/mobile_log_d
--bin/netdiag
-
-# MTK Logger Configuration
-etc/mtklog-config.prop
 
 # Wifi
 etc/firmware/ROMv2_lm_patch_1_0_hdr.bin
