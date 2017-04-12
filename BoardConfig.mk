@@ -32,6 +32,9 @@ TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 # FSTAB
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.mt6735
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := taido,taido_row
+
 # Audio
 USE_CUSTOM_AUDIO_POLICY := 1
 BOARD_USES_MTK_AUDIO := true
