@@ -54,19 +54,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
 # Root
-PRODUCT_PACKAGES += \
-    fstab.mt6735 \
-    init.mt6735.rc \
-    init.mt6735.modem.rc \
-    init.mt6735.usb.rc \
-    init.target.rc \
-    meta_init.rc \
-    meta_init.modem.rc \
-    meta_init.project.rc \
-    factory_init.rc \
-    factory_init.usb.rc \
-    factory_init.project.rc \
-    ueventd.mt6735.rc
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,${LOCAL_PATH}/rootdir,root)
 
 # Audio
 PRODUCT_PACKAGES += \

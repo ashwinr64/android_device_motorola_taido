@@ -1,0 +1,27 @@
+on post-fs-data
+	mkdir /data/local/log 0777 shell shell
+	mkdir /data/local/log/lastlog 0777 shell shell
+
+service lcc_setup /system/bin/lenovo_crash_check setup
+	class main
+	oneshot
+
+service lcc_copy_exp /system/bin/lenovo_crash_check copy_exp
+	class main
+	disabled
+	oneshot
+
+service lcc_check_acrash /system/bin/lenovo_crash_check check_acrash
+	class main
+	disabled
+	oneshot
+
+on property:sys.boot_completed=1
+    start lcc_copy_exp
+
+on property:init.svc.zygote=restarting
+    start lcc_check_acrash
+
+on property:sys.lenovo.simulate.ke=TRUE
+    write /proc/sysrq-trigger c
+
