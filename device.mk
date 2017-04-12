@@ -96,7 +96,7 @@ MTK_GPU_VERSION := mali midgard r7p0
 # Power
 PRODUCT_PACKAGES += \
     power.default \
-    power.mt6735
+    power.mt6735m
 
 # Radio dependencies
 PRODUCT_PACKAGES += \
