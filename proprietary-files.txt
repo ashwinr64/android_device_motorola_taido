@@ -49,7 +49,10 @@ xbin/mnld
 
 # Power / Thermal
 bin/fuelgauged
+bin/kpoc_charger
+bin/thermal
 bin/thermal_manager
+bin/thermald
 lib/libperfservicenative.so
 lib/libmtcloader.so
 lib/libfgauge.so
