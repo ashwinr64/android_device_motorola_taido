@@ -1,5 +1,5 @@
-DEVICE_PATH := device/mts/smart_surf2_4g
-VENDOR_PATH := vendor/mts/smart_surf2_4g
+DEVICE_PATH := device/motorola/taido
+VENDOR_PATH := vendor/motorola/taido
 
 USE_CAMERA_STUB := true
 
@@ -63,7 +63,7 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 -
 
 #in case we want to build kernel from source
 # uncomment the following lines
-#TARGET_KERNEL_SOURCE := kernel/mts/smart_surf2_4g
+#TARGET_KERNEL_SOURCE := kernel/motorola/taido
 #TARGET_KERNEL_CONFIG := smart_surf2_4g_debug_defconfig
 #TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-android-
 #BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
