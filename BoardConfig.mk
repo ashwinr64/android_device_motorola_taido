@@ -3,33 +3,17 @@ VENDOR_PATH := vendor/motorola/taido
 
 USE_CAMERA_STUB := true
 
-FORCE_32_BIT = true
-
 # inherit from the proprietary version
 -include $(VENDOR_PATH)/BoardConfigVendor.mk
 
 TARGET_BOARD_PLATFORM := mt6737m
 
 # Architecture
-ifeq ($(FORCE_32_BIT),true)
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
-else
-TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := cortex-a53
-
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv7-a-neon
-TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a53
-endif
 
 TARGET_NO_BOOTLOADER := true
 TARGET_CPU_SMP := true
@@ -105,41 +89,13 @@ TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness/
 TW_MAX_BRIGHTNESS := 255
 
-#may be usefull if we get graphical glitches
-#RECOVERY_GRAPHICS_USE_LINELENGTH := true
-
-#in case of wrong color this needs modification
-#TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-
-#if sdcard0 is a /data/media emulated one
-#RECOVERY_SDCARD_ON_DATA := true
-
-#ntfs support? (needs much space..)
-#TW_INCLUDE_NTFS_3G := true
-
-#we may need that if sdcard0 dont work
-#TW_FLASH_FROM_STORAGE := true
-#TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-#TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-#TW_DEFAULT_EXTERNAL_STORAGE := true
-
-#only add if kernel supports
-#TW_INCLUDE_FUSE_EXFAT := true
-
-#F2FS support (only activate if kernel supports)
-#TARGET_USERIMAGES_USE_F2FS:=true
-
-
 #Mediatek flags
 BOARD_HAS_MTK_HARDWARE := true
 BOARD_USES_MTK_HARDWARE := true
 MTK_HARDWARE := true
-#COMMON_GLOBAL_CFLAGS += -DMTK_HARDWARE -DMTK_AOSP_ENHANCEMENT
-#COMMON_GLOBAL_CPPFLAGS += -DMTK_HARDWARE -DMTK_AOSP_ENHANCEMENT
 
 #EGL settings
 USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := $(DEVICE_PATH)/egl.cfg
 
 # CyanogenMod Hardware Hooks
 BOARD_HARDWARE_CLASS := $(DEVICE_PATH)/cmhw/
@@ -150,7 +106,6 @@ BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril
 BOARD_SEPOLICY_DIRS := $(DEVICE_PATH)/sepolicy
 
 TARGET_LDPRELOAD += libxlog.so:libmtk_symbols.so
-#TARGET_LDPRELOAD += libxlog.so
 
 BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/seccomp
 
@@ -161,24 +116,4 @@ BLOCK_BASED_OTA := false
 # Test (for using modified framework)
 BOARD_USES_LEGACY_MTK_AV_BLOB := true
 BOARD_HAS_MTK_HARDWARE := true
-
-#Don't enable this strings ... Just for test ...
-
-#TARGET_USES_MEDIA_EXTENSIONS := false
-#TARGET_HAS_LEGACY_CAMERA_HAL1 := true
-
-# Mediatek 
-#ifeq ($(BOARD_HAS_MTK_HARDWARE),true)
-#MTK_GLOBAL_C_INCLUDES:=
-#MTK_GLOBAL_CFLAGS:=
-#MTK_GLOBAL_CONLYFLAGS:=
-#MTK_GLOBAL_CPPFLAGS:=
-#MTK_GLOBAL_LDFLAGS:=
-
-#MTK_GLOBAL_CFLAGS += -DMTK_AOSP_ENHANCEMENT
-#MTK_PATH_SOURCE := vendor/mediatek/proprietary
-#MTK_ROOT := vendor/mediatek/proprietary
-
-#$(info *** Mediatek Platform Used ***)
-#endif
 
