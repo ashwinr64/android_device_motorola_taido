@@ -93,6 +93,10 @@ PRODUCT_COPY_FILES += \
 # Graphics
 MTK_GPU_VERSION := mali midgard r7p0
 
+# libmtk_symbols
+PRODUCT_PACKAGES += \
+    
+
 # Power
 PRODUCT_PACKAGES += \
     power.default \
