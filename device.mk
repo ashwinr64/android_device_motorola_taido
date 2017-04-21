@@ -100,7 +100,7 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     power.default \
-    power.mt6735m
+    power.mt6735
 
 # Radio dependencies
 PRODUCT_PACKAGES += \
