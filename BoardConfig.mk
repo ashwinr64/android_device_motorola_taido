@@ -112,7 +112,7 @@ BOARD_RIL_CLASS := ../../../device/motorola/taido/ril
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Symbols
-TARGET_LDPRELOAD += libmtk_symbols.so
+TARGET_LDPRELOAD += libxlog.so:libmtk_symbols.so
 
 # Wireless
 BOARD_WLAN_DEVICE := MediaTek
