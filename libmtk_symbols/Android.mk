@@ -8,7 +8,8 @@ LOCAL_SRC_FILES := \
     mtk_omx.cpp \
     icu55.c \
     icu53.c \
-    ssl.c
+    ssl.c \
+    volte.cpp
 
 # only for 32bit libraries
 LOCAL_SRC_FILES_32 := mtk_string.cpp

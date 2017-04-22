@@ -228,6 +228,42 @@ etc/firmware/ROMv2_lm_patch_1_0_hdr.bin
 etc/firmware/ROMv2_lm_patch_1_1_hdr.bin
 etc/firmware/WIFI_RAM_CODE_6735
 
+# VoLTE
+bin/volte_imcb
+bin/volte_stack
+bin/volte_ua
+bin/vtservice
+etc/mddb/DbgInfo_LR9.W1444.MD.LWTG.MP_TAIDO_ROW_TAIDO_ROW_V24_2017_03_29_11_11_1_lwg_n
+lib/lib3DJPG.so
+lib/libLeCSC.so
+lib/libamr_wrap.so
+lib/libamrvt.so
+lib/libawb_wrap.so
+lib/libcomutils.so
+lib/libimg_utils.so
+lib/libimsma.so
+lib/libimsma_rtp.so
+lib/libimsma_socketwrapper.so
+lib/libmal.so
+lib/libmal_datamngr.so
+lib/libmal_epdga.so
+lib/libmal_imsmngr.so
+lib/libmal_nwmngr.so
+lib/libmal_rds.so
+lib/libmal_rilproxy.so
+lib/libmal_simmngr.so
+lib/libmdfx.so
+lib/libmtk_vt_service.so
+lib/libmtk_vt_swip.so
+lib/libmtk_vt_utils.so
+lib/libmtk_vt_wrapper.so
+lib/libopencv_java.so
+lib/libvt_avsync.so
+lib/libvt_custom.so
+lib/libvt_socketbind.so
+lib/libwfo_jni.so
+lib/volte_imsm.so
+
 # WV DRM
 etc/permissions/com.google.widevine.software.drm.xml
 -framework/com.google.widevine.software.drm.jar
@@ -236,4 +272,3 @@ vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L3.so
 vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
-

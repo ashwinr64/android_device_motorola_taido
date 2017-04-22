@@ -51,3 +51,7 @@ ro.sys.fw.dex2oat_thread_count=3
 # Camera
 media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
+
+# VoLTE
+persist.mtk.volte.enable=1
+ro.mtk_volte_support=1

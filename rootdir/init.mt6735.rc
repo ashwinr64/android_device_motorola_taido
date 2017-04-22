@@ -1049,7 +1049,6 @@ service PPLAgent /system/bin/ppl_agent
     user system
     group system cache
 
-
 service cmmb /system/bin/cmmbsp
     class main
     user root
