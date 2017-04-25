@@ -102,10 +102,25 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
 
-# Audio componets from source
+# Audio
 PRODUCT_PACKAGES += \
-    audio.usb.default \
-    audio.r_submix.default
+    audio.a2dp.default \
+    audio.r_submix.default \
+    libaudiopolicymanagerdefault \
+    libtinyalsa \
+    libtinycompress \
+    libtinymix \
+    libtinyxml \
+    libfs_mgr
+
+# Display
+PRODUCT_PACKAGES += \
+    libion
+
+# FM
+PRODUCT_PACKAGES += \
+    libfmjni \
+    FMRadio
 
 PRODUCT_COPY_FILES += \
     prebuilts/ndk/current/sources/cxx-stl/stlport/libs/armeabi-v7a/libstlport_shared.so:system/lib/libstlport.so
