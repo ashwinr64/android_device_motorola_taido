@@ -95,7 +95,7 @@ MTK_GPU_VERSION := mali midgard r7p0
 
 # libmtk_symbols
 PRODUCT_PACKAGES += \
-    
+    libmtk_symbols
 
 # Power
 PRODUCT_PACKAGES += \
