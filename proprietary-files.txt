@@ -244,9 +244,11 @@ lib/libacdk.so
 lib/libcustom_prop.so
 lib/libfs_mgr.so
 lib/libmnl.so
+lib/libmrdump.so
 lib/libperfservice.so
 lib/libperfservicenative.so
 lib/libshowlogo.so
+lib/libxlog.so
 usr/keylayout/ACCDET.kl
 usr/keylayout/mtk-kpd.kl
 xbin/BGW
