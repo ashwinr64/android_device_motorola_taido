@@ -12,6 +12,7 @@ bin/netdiag
 bin/terservice
 lib/libaed.so
 lib/libccci_util.so
+lib/libnetutils.so
 lib/librilmtk.so
 lib/librilmtkmd2.so
 lib/libterservice.so
