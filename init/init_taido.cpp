@@ -37,8 +37,5 @@
 
 void vendor_load_properties()
 {
-            property_set("ro.product.model", "Wileyfox Spark");
-            property_set("dalvik.vm.heapgrowthlimit", "128m");
-            property_set("dalvik.vm.heapsize", "174m");
-            property_set("ro.media.maxmem", "1073741824");
+    property_set("ro.product.model", "Moto E³ POWER");
 }
