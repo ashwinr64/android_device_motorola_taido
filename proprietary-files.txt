@@ -211,6 +211,7 @@ lib/libmtk_drvb.so
 lib/libmtk_mmutils.so
 lib/libmtkjpeg.so
 lib/libmtkshifter.so
+lib/libspeech_enh_lib.so
 lib/libstagefrighthw.so
 lib/libvc1dec_sa.ca7.so
 lib/libvcodec_oal.so
