@@ -1,10 +1,12 @@
 # MTK project .rc configure
 
 import init.mt6735.usb.rc
+import init.lenovo.crash.check.rc
 
 on init
     mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
     mkdir /storage/usbotg 0700 root root
+    mkdir /preload
 
 on post-fs-data
 
@@ -43,16 +45,33 @@ on post-fs-data
     chown system system /dev/wmtWifi
 
 #Camera
+    chmod 0660 /dev/MAINAF
+    chown system camera /dev/MAINAF
+
+    chmod 0660 /dev/MAINAF2
+    chown system camera /dev/MAINAF2
+
+    chmod 0660 /dev/SUBAF
+    chown system camera /dev/SUBAF
+
     chmod 0660 /dev/GAF001AF
     chown system camera /dev/GAF001AF
 
     chmod 0660 /dev/DW9714AF
     chown system camera /dev/DW9714AF
 
-    chmod 0660 /dev/LC898212AF
-    chown system camera /dev/LC898212AF
+	#add by huangsh4
+    chmod 0660 /dev/DW9718AF
+    chown system camera /dev/DW9718AF
 
-    chmod 0660 /dev/BU64745GWZAF
+    chmod 0660 /dev/DW9718AF_OFILM
+    chown system camera /dev/DW9718AF_OFILM
+	#add end
+
+    chmod 0660 /dev/AD5820AF
+    chown system camera /dev/AD5820AF
+
+	chmod 0660 /dev/BU64745GWZAF
     chown system camera /dev/BU64745GWZAF
 
 #SMB
@@ -84,6 +103,11 @@ on post-fs-data
     chmod 660 /dev/ttyGS1
     chown system /dev/ttyGS1
 
+#lenovo-sw limm3 add begin
+	chown system system /proc/mtk_battery_cmd/current_cmd
+	chmod 0666 /proc/mtk_battery_cmd/current_cmd
+#lenovo-sw limm3 add end
+
 #Disable for one Single loader
 # Load WiFi Driver
 #   insmod /system/lib/modules/wlan_mt.ko
@@ -93,25 +117,26 @@ on post-fs-data
     chown bluetooth bluetooth /dev/ampc0
     chmod 0660 /dev/ampc0
 
-# for gesture
-    chown system system /sys/devices/mx_tsp/gesture_control
-    chown system system /sys/devices/mx_tsp/gesture_data
-
-# for notification light
-    chown system system /sys/devices/mx_leds/leds_mode
-
-#FLYME_EDIT:zhouyueguo@SHELL.PowerSavingMode.Feature Permissions add for power saving mode {@
-#Permissions for power saving mode
-        chown system system /sys/power/power_mode
-        chmod 0660 /sys/power/power_mode
-#@}
-
 #
 # Connectivity related device nodes & configuration (end)
 #
 
-# Encrypt phone function
-    setprop vold.post_fs_data_done 1
+
+    chmod 0666 /dev/exm0
+
+on init
+    # Refer to http://source.android.com/devices/tech/storage/index.html
+    # It said, "Starting in Android 4.4, multiple external storage devices are surfaced to developers through
+    #           Context.getExternalFilesDirs(), Context.getExternalCacheDirs(), and Context.getObbDirs().
+    #           External storage devices surfaced through these APIs must be a semi-permanent part of the device (such as an SD card slot in a battery compartment).
+    #           Developers expect data stored in these locations to be available over long periods of time."
+    # Therefore, if the target doesn't support sd hot-plugging (Ex: the SD card slot in a battery compartment), we need to export SECONDARY_STORAGE in 'boot' section
+    #
+    # export SECONDARY_STORAGE /storage/sdcard1
+
+service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbotg /storage/usbotg
+    class late_start
+    disabled
 
 #
 # Connectivity related services (Begin)
