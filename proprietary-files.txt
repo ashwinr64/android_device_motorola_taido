@@ -110,6 +110,11 @@ lib/libfmcust.so
 # Camera
 lib/hw/camera.mt6735m.so:lib/hw/camera.mt6735.so
 lib/lib3a.so
+lib/libJpgDecPipe.so
+lib/libJpgEncPipe.so
+lib/libSwJpgCodec.so
+lib/liba3m.so
+lib/libacdk.so
 lib/libcam.camadapter.so
 lib/libcam.campipe.so
 lib/libcam.camshot.so
@@ -154,28 +159,15 @@ lib/libimageio_FrmB.so
 lib/libimageio_plat_drv.so
 lib/libimageio_plat_drv_FrmB.so
 lib/libmtkcamera_client.so
+lib/libmtkjpeg.so
 
 # Media
-bin/MtkCodecService
+etc/audio_param/AudioParamOptions.xml
 lib/hw/audio.primary.mt6735m.so:lib/hw/audio.primary.mt6735.so
-lib/libBnMtkCodec.so
 lib/libHEVCdec_sa.ca7.android.so
-lib/libJpgDecPipe.so
-lib/libJpgEncPipe.so
-lib/libMtkOmxAdpcmDec.so
-lib/libMtkOmxAdpcmEnc.so
-lib/libMtkOmxAlacDec.so
-lib/libMtkOmxApeDec.so
 lib/libMtkOmxCore.so
-lib/libMtkOmxFlacDec.so
-lib/libMtkOmxG711Dec.so
-lib/libMtkOmxGsmDec.so
-lib/libMtkOmxMp3Dec.so
-lib/libMtkOmxRawDec.so
 lib/libMtkOmxVdecEx.so
 lib/libMtkOmxVenc.so
-lib/libMtkOmxVorbisEnc.so
-lib/libSwJpgCodec.so
 lib/libaudio-resampler.so
 lib/libaudiocompensationfilter.so
 lib/libaudiocomponentengine.so
@@ -188,7 +180,6 @@ lib/libbwc.so
 lib/libcvsd_mtk.so
 lib/libdrmmtkutil.so
 lib/libdrmmtkwhitelist.so
-lib/libh264enc_sa.ca7.so
 lib/libmal.so
 lib/libmatv_cust.so
 lib/libmdfx.so
@@ -200,7 +191,6 @@ lib/libmp4enc_xa.ca7.so
 lib/libmsbc_mtk.so
 lib/libmtk_drvb.so
 lib/libmtk_mmutils.so
-lib/libmtkjpeg.so
 lib/libmtkshifter.so
 lib/libspeech_enh_lib.so
 lib/libstagefrighthw.so
@@ -209,7 +199,6 @@ lib/libvcodec_oal.so
 lib/libvcodec_utility.so
 lib/libvcodecdrv.so
 lib/libvp8dec_sa.ca7.so
-lib/libvp8enc_sa.ca7.so
 lib/libvp9dec_sa.ca7.so
 
 # Misc.
@@ -224,24 +213,20 @@ etc/firmware/catcher_filter_1_lwg_n.bin
 etc/perfservscntbl.txt
 lib/hw/lights.mt6735m.so:lib/hw/lights.mt6735.so
 lib/hw/memtrack.mt6735m.so:lib/hw/memtrack.mt6735.so
-lib/liba3m.so
-lib/libacdk.so
 lib/libcustom_prop.so
+lib/libfs_mgr.so
 lib/libmnl.so
 lib/libmrdump.so
 lib/libperfservice.so
 lib/libperfservicenative.so
 lib/libshowlogo.so
 lib/libxlog.so
-usr/keylayout/ACCDET.kl
-usr/keylayout/mtk-kpd.kl
 xbin/BGW
 
-#WiFi
+# WiFi
 etc/firmware/ROMv2_lm_patch_1_0_hdr.bin
 etc/firmware/ROMv2_lm_patch_1_1_hdr.bin
 etc/firmware/WIFI_RAM_CODE_6735
-etc/firmware/WMT_SOC.cfg
 
 # WV DRM
 etc/permissions/com.google.widevine.software.drm.xml
