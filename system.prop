@@ -47,3 +47,7 @@ ro.config.max_starting_bg=3
 
 # use 3 threads max for dex2oat
 ro.sys.fw.dex2oat_thread_count=3
+
+# Camera
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
