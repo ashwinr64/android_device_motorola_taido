@@ -10,6 +10,8 @@ bin/mtkrild
 bin/mtkrildmd2
 bin/netdiag
 bin/terservice
+etc/firmware/dsp_1_lwg_n.bin
+etc/firmware/modem_1_lwg_n.img
 lib/libaed.so
 lib/libccci_util.so
 lib/libnetutils.so
@@ -41,7 +43,6 @@ lib/libhwm.so
 -app/YGPS/YGPS.apk
 bin/mtk_agpsd
 bin/wifi2agps
-etc/agps_profiles_conf2.xml
 lib/hw/gps.mt6735m.so:lib/hw/gps.mt6735.so
 xbin/mnld
 
@@ -50,9 +51,6 @@ bin/kpoc_charger
 bin/thermal
 bin/thermal_manager
 bin/thermald
-etc/.tp/.ht120.mtc
-etc/.tp/thermal.conf
-etc/.tp/thermal.off.conf
 lib/libmtcloader.so
 lib/libmtklimiter.so
 
@@ -90,8 +88,6 @@ lib/libui_ext.so
 bin/6620_wmt_concurrency
 bin/6620_wmt_lpbk
 bin/wmt_loader
-etc/firmware/WIFI_RAM_CODE_6735
-etc/firmware/WMT_SOC.cfg
 etc/firmware/mt6627/mt6627_fm_v1_coeff.bin
 etc/firmware/mt6627/mt6627_fm_v1_patch.bin
 etc/firmware/mt6627/mt6627_fm_v2_coeff.bin
@@ -103,9 +99,6 @@ etc/firmware/mt6627/mt6627_fm_v4_patch.bin
 etc/firmware/mt6627/mt6627_fm_v5_coeff.bin
 etc/firmware/mt6627/mt6627_fm_v5_patch.bin
 etc/fmr/mt6627_fm_cust.cfg
-etc/wifi/p2p_supplicant_overlay.conf
-etc/wifi/wpa_supplicant.conf
-etc/wifi/wpa_supplicant_overlay.conf
 lib/hw/radio.fm.mt6735m.so:lib/hw/radio.fm.mt6735.so
 lib/libbluetooth_mtk.so
 lib/libbluetooth_mtk_pure.so
@@ -164,9 +157,6 @@ lib/libmtkcamera_client.so
 
 # Media
 bin/MtkCodecService
-etc/audio_device.xml
-etc/audio_policy.conf
-etc/mtk_omx_core.cfg
 lib/hw/audio.primary.mt6735m.so:lib/hw/audio.primary.mt6735.so
 lib/libBnMtkCodec.so
 lib/libHEVCdec_sa.ca7.android.so
@@ -229,20 +219,14 @@ bin/fsck_msdos_mtk
 bin/lcdc_screen_cap
 bin/muxreport
 bin/ppl_agent
-bin/program_binary_service
-etc/firmware/ROMv2_lm_patch_1_0_hdr.bin
-etc/firmware/ROMv2_lm_patch_1_1_hdr.bin
 etc/firmware/S_ANDRO_SFL.ini
 etc/firmware/catcher_filter_1_lwg_n.bin
-etc/firmware/dsp_1_lwg_n.bin
-etc/firmware/modem_1_lwg_n.img
 etc/perfservscntbl.txt
 lib/hw/lights.mt6735m.so:lib/hw/lights.mt6735.so
 lib/hw/memtrack.mt6735m.so:lib/hw/memtrack.mt6735.so
 lib/liba3m.so
 lib/libacdk.so
 lib/libcustom_prop.so
-lib/libfs_mgr.so
 lib/libmnl.so
 lib/libmrdump.so
 lib/libperfservice.so
@@ -253,6 +237,12 @@ usr/keylayout/ACCDET.kl
 usr/keylayout/mtk-kpd.kl
 xbin/BGW
 
+#WiFi
+etc/firmware/ROMv2_lm_patch_1_0_hdr.bin
+etc/firmware/ROMv2_lm_patch_1_1_hdr.bin
+etc/firmware/WIFI_RAM_CODE_6735
+etc/firmware/WMT_SOC.cfg
+
 # WV DRM
 etc/permissions/com.google.widevine.software.drm.xml
 -framework/com.google.widevine.software.drm.jar
@@ -261,3 +251,4 @@ vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L3.so
 vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
+
