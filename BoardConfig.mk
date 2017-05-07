@@ -94,6 +94,9 @@ MTK_HWC_VERSION := 1.4.1
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_taido
 
+# libc with GCC
+TARGET_NEEDS_GCC_LIBC := true
+
 # Mediatek support
 BOARD_USES_MTK_HARDWARE := true
 
