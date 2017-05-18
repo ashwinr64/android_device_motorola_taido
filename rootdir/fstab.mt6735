@@ -22,7 +22,6 @@
 
 
 
-/devices/mtk-msdc.0/11230000.msdc0* auto vfat defaults voldmanaged=sdcard0:auto
 /devices/mtk-msdc.0/11240000.msdc1* auto auto defaults voldmanaged=sdcard1:auto,encryptable=userdata
 /devices/platform/mt_usb* auto vfat defaults voldmanaged=usbotg:auto
 
