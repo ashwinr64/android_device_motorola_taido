@@ -172,4 +172,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal.off.conf:system/etc/.tp/thermal.off.conf \
     $(LOCAL_PATH)/configs/ht120.mtc:system/etc/.tp/.htc120.mtc
 
+# TODO: Rmove these debugging props before shipping
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.secure=0 \
+    ro.allow.mock.location=1 \
+    ro.adb.secure=0 \
+    persist.sys.usb.config=adb
 
