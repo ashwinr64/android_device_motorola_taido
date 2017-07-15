@@ -3,6 +3,7 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
     mtk_audio.cpp \
+    mtk_bionic.cpp \
     mtk_gui.cpp \
     mtk_ui.cpp \
     mtk_omx.cpp \
@@ -25,7 +26,7 @@ LOCAL_C_INCLUDES += \
     $(call include-path-for, audio-effects) \
     $(call include-path-for, audio-utils)
 
-LOCAL_SHARED_LIBRARIES := libbinder libutils liblog libgui libui \
+LOCAL_SHARED_LIBRARIES := libc libbinder libutils liblog libgui libui \
                           libicuuc libicui18n libcrypto libmedia
 LOCAL_MODULE := libmtk_symbols
 LOCAL_CLANG := false
