@@ -107,6 +107,10 @@ PRODUCT_PACKAGES += \
     muxreport \
     terservice
 
+# Snap
+PRODUCT_PACKAGES += \
+    Snap
+
 # Telephony
 SIM_COUNT := 2
 PRODUCT_PROPERTY_OVERRIDES += ro.telephony.sim.count=$(SIM_COUNT)
