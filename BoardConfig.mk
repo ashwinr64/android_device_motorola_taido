@@ -123,6 +123,14 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 # Symbols
 TARGET_LDPRELOAD += libxlog.so:libmtk_symbols.so
 
+# TWRP
+ifeq ($(WITH_TWRP),true)
+TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)/twrp
+TW_THEME := portrait_hdpi
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+endif
+
 # Wireless
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 BOARD_HOSTAPD_DRIVER := NL80211
