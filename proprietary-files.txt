@@ -40,10 +40,9 @@ lib/hw/sensors.mt6735m.so:lib/hw/sensors.mt6735.so
 lib/libhwm.so
 
 # GPS
--app/YGPS/YGPS.apk
 bin/mtk_agpsd
 bin/wifi2agps
-lib/hw/gps.mt6735m.so:lib/hw/gps.mt6735.so
+lib/hw/gps.mt6735.so|ff8c583baf353e9697864cb975a19af2da7930cd
 xbin/mnld
 
 # Power / Thermal
