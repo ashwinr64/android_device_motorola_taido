@@ -70,7 +70,7 @@ lib/hw/gralloc.mt6735m.so:lib/hw/gralloc.mt6735.so
 lib/hw/hwcomposer.mt6735m.so:lib/hw/hwcomposer.mt6735.so
 lib/libblisrc.so
 lib/libblisrc32.so
-lib/libdpframework.so
+-lib/libdpframework.so
 lib/libgas.so
 lib/libged.so
 lib/libgpu_aux.so
