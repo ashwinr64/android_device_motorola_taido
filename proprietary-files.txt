@@ -14,7 +14,7 @@ etc/firmware/dsp_1_lwg_n.bin
 etc/firmware/modem_1_lwg_n.img
 lib/libaed.so
 lib/libccci_util.so
-lib/libnetutils.so
+lib/libnetutils.so|1ec3b6badf96c414c46415911c412c379d8ffb6f
 lib/librilmtk.so
 lib/librilmtkmd2.so
 lib/libterservice.so
