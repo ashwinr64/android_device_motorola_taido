@@ -197,7 +197,3 @@ sys.io.scheduler=bfq
 # Camera
 media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
-
-# VoLTE
-persist.mtk.volte.enable=1
-ro.mtk_volte_support=1
