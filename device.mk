@@ -17,6 +17,8 @@
 VENDOR_BLOBS ?= vendor/motorola/taido/taido-vendor.mk
 $(call inherit-product-if-exists, $(VENDOR_BLOBS))
 
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
