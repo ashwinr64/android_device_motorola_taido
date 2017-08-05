@@ -4,3 +4,5 @@ allow kernel self:capability dac_override;
 allow kernel wifi_data_file:dir search;
 allow kernel wifi_data_file:file r_file_perms;
 
+r_dir_file(kernel, firmware_file)
+

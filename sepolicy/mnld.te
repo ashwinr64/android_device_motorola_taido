@@ -22,6 +22,8 @@ allow mnld nvdata_file:dir rw_dir_perms;
 allow mnld nvdata_file:file create_file_perms;
 allow mnld nvram_device:blk_file rw_file_perms;
 
+allow mnld nvram_prop:file r_file_perms;
+
 allow mnld sysfs_gps_file:dir search;
 allow mnld sysfs_gps_file:file rw_file_perms;
 
@@ -39,5 +41,14 @@ allow mnld storage_file:lnk_file read;
 
 allow mnld mdlog_device:chr_file { read write };
 
+allow mnld sysfs_boot_mode:file r_file_perms;
+
+allow mnld mnt_user_file:dir search;
+allow mnld mnt_user_file:lnk_file read;
+allow mnld tmpfs:lnk_file read;
+
+r_dir_file(mnld, proc_xlog)
+
+get_prop(mnld, wmt_prop)
 file_type_auto_trans(mnld,system_data_file,mnld_data_file);
 file_type_auto_trans(mnld,apk_data_file,mnld_data_file);

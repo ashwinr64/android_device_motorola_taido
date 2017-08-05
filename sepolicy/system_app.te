@@ -1,1 +1,4 @@
 allow system_app fm_device:chr_file rw_file_perms;
+
+# FM app
+set_prop(system_app, wmt_prop)

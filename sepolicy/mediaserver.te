@@ -2,10 +2,12 @@
 allow mediaserver nvdata_file:dir rw_dir_perms;
 allow mediaserver nvdata_file:file create_file_perms;
 allow mediaserver ccci_device:chr_file rw_file_perms;
+get_prop(mediaserver, nvram_prop)
 
 # camera
 allow mediaserver sensorservice_service:service_manager find;
 allow mediaserver system_server:unix_stream_socket { read write };
+allow mediaserver camera_device:chr_file rw_file_perms;
 
 # video codec
 allow mediaserver Vcodec_device:chr_file rw_file_perms;
@@ -18,3 +20,8 @@ allow mediaserver pq_service:service_manager find;
 
 # Audio
 allow mediaserver audiohal_prop:property_service set;
+
+# Access to sysfs
+allow mediaserver sysfs_boot_mode:file r_file_perms;
+allow mediaserver sysfs_dev_info:file r_file_perms;
+

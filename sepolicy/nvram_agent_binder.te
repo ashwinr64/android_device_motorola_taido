@@ -1,0 +1,6 @@
+type nvram_agent_binder_exec, exec_type, file_type;
+type nvram_agent_binder, domain;
+
+init_daemon_domain(nvram_agent_binder)
+
+allow nvram_agent_binder servicemanager:binder { call transfer };

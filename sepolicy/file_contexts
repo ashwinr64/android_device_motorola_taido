@@ -12,16 +12,20 @@
 /system/bin/msensord                                            u:object_r:msensord_exec:s0
 /system/bin/mtk_agpsd                                           u:object_r:agpsd_exec:s0
 /system/bin/nvram_daemon                                        u:object_r:nvram_daemon_exec:s0
+/system/bin/nvram_agent_binder                                  u:object_r:nvram_agent_binder_exec:s0
 /system/bin/pq                                                  u:object_r:pq_exec:s0
 /system/bin/ril-daemon-mtk                                      u:object_r:ril-daemon-mtk_exec:s0
 /system/bin/slpd                                                u:object_r:slpd_exec:s0
 /system/bin/terservice                                          u:object_r:terservice_exec:s0
 /system/bin/thermal_manager                                     u:object_r:thermal_manager_exec:s0
+/system/bin/thermal                                             u:object_r:thermal_manager_exec:s0
+/system/bin/thermald                                            u:object_r:thermal_manager_exec:s0
 /system/bin/mtkrild                                             u:object_r:ril-daemon-mtk_exec:s0
 /system/bin/wifi2agps                                           u:object_r:wifi2agps_exec:s0
 /system/bin/wmt_loader                                          u:object_r:wmt_loader_exec:s0
 /system/bin/mobile_log_d                                        u:object_r:mobile_log_d_exec:s0
 /system/bin/netdiag                                             u:object_r:netdiag_exec:s0
+/system/bin/kpoc_charger                                        u:object_r:kpoc_charger_exec:s0
 
 # Meta mode
 /sbin/multi_init                                                u:object_r:init_exec:s0
@@ -33,6 +37,7 @@
 /protect_s(/.*)?                                                u:object_r:protect_s_data_file:s0
 /nvdata(/.*)?                                                   u:object_r:nvdata_file:s0
 /protect_s/properties(/.*)?                                     u:object_r:persist_property_file:s0
+/system/etc/firmware(/.*)?                                      u:object_r:firmware_file:s0
 
 # Hardware nodes
 /dev/accdet                                                     u:object_r:accdet_device:s0
@@ -52,6 +57,9 @@
 /dev/kd_camera_flashlight                                       u:object_r:camera_device:s0
 /dev/MAINAF                                                     u:object_r:camera_device:s0
 /dev/MTK_SMI                                                    u:object_r:camera_device:s0
+/dev/CAM_CAL_DRV                                                u:object_r:camera_device:s0
+/dev/camera-pipemgr                                             u:object_r:camera_device:s0
+/dev/camera-sysram                                              u:object_r:camera_device:s0
 /dev/MT_pmic_adc_cali                                           u:object_r:pmic_adc_device:s0
 /dev/als_ps(/.*)?                                               u:object_r:als_ps_device:s0
 /dev/mtk-adc-cali(/.*)?                                         u:object_r:mtk-adc-cali_device:s0
@@ -66,6 +74,7 @@
 /dev/radio(/.*)?                                                u:object_r:radio_device:s0
 /dev/fm                                                         u:object_r:fm_device:s0
 /dev/Vcodec                                                     u:object_r:Vcodec_device:s0
+/dev/otp                                                        u:object_r:otp_device:s0
 
 # Sockets
 /dev/socket/netdiag(/.*)?                                       u:object_r:netdiag_socket:s0
@@ -76,6 +85,9 @@
 /dev/socket/rild-mtk-ut                                         u:object_r:rild_socket:s0
 /dev/socket/rild-mtk-ut-2                                       u:object_r:rild_socket:s0
 /dev/socket/rild-oem                                            u:object_r:rild_socket:s0
+/dev/socket/rild-mal                                            u:object_r:rild_socket:s0
+/dev/socket/rild-mal-at                                         u:object_r:rild_socket:s0
+/dev/socket/rild-vsim                                           u:object_r:rild_socket:s0
 /dev/socket/agpsd                                               u:object_r:agpsd_socket:s0
 /dev/socket/agpsd[2-3]                                          u:object_r:agpsd_socket:s0
 /dev/socket/mnld                                                u:object_r:mnld_socket:s0
@@ -87,6 +99,8 @@
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/nvdata    u:object_r:nvdata_device:s0
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/protect1  u:object_r:protect1_device:s0
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/protect2  u:object_r:protect2_device:s0
+/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/persist   u:object_r:persist_device:s0
+/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/para      u:object_r:para_device:s0
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/userdata  u:object_r:userdata_block_device:s0
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/cache     u:object_r:cache_block_device:s0
 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/recovery  u:object_r:recovery_block_device:s0
@@ -97,7 +111,11 @@
 
 # Sysfs nodes
 /sys/devices/virtual/gpsdrv(/.*)?                               u:object_r:sysfs_gps_file:s0
-/sys/kernel/ccci/boot                                           u:object_r:sysfs_ccci:s0
+/sys/kernel/ccci(/.*)?                                          u:object_r:sysfs_ccci:s0
+/sys/devices/virtual/BOOT/BOOT/boot/boot_mode                   u:object_r:sysfs_boot_mode:s0
+/sys/bus/platform/drivers/dev_info/dev_info                     u:object_r:sysfs_dev_info:s0
+/sys/devices/virtual/switch/h2w/state                           u:object_r:sysfs_h2w_state:s0
+/sys/mtk_ssw/mode                                               u:object_r:sysfs_mtk_ssw:s0
 /sys/devices/platform/mtk_disp_mgr.0/rgb                        u:object_r:livedisplay_sysfs:s0
 
 # Config/Runtime files
@@ -114,3 +132,4 @@
 /data/mdl(/.*)?                                                 u:object_r:mdlog_data_file:s0
 /data/ccci_cfg(/.*)?                                            u:object_r:ccci_cfg_file:s0
 /data/.tp(/.*)?                                                 u:object_r:thermal_manager_data_file:s0
+

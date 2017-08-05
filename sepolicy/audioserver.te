@@ -1,0 +1,16 @@
+allow audioserver ccci_device:chr_file { ioctl open read write };
+allow audioserver init:unix_stream_socket connectto;
+allow audioserver nvdata_file:dir search;
+allow audioserver nvdata_file:file { getattr open read };
+allow audioserver property_socket:sock_file write;
+allow audioserver fm_device:chr_file rw_file_perms;
+allow audioserver sysfs_ccci:dir search;
+allow audioserver sysfs_ccci:file { open read };
+allow audioserver sysfs_boot_mode:file r_file_perms;
+allow audioserver sysfs_h2w_state:file r_file_perms;
+allow audioserver sysfs_dev_info:file r_file_perms;
+
+r_dir_file(audioserver, proc_xlog)
+set_prop(audioserver, audiohal_prop)
+set_prop(audioserver, nvram_prop)
+set_prop(audioserver, wmt_prop)

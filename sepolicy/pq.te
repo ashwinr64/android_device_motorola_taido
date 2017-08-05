@@ -8,6 +8,7 @@ binder_call(pq, binderservicedomain)
 binder_service(pq)
 
 allow pq pq_service:service_manager add;
-unix_socket_connect(pq, property, init)
 
-allow pq pq_conf_prop:property_service set;
+allow pq proc_pq:file r_file_perms;
+
+set_prop(pq, pq_conf_prop)

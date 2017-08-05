@@ -4,6 +4,6 @@ type conn_launcher, domain;
 init_daemon_domain(conn_launcher);
 
 allow conn_launcher stpwmt_device:chr_file rw_file_perms;
-allow conn_launcher wmt_prop:property_service set;
 
-unix_socket_connect(conn_launcher, property, init)
+r_dir_file(conn_launcher, firmware_file)
+set_prop(conn_launcher, wmt_prop)

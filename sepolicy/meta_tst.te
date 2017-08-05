@@ -28,9 +28,9 @@ allow meta_tst gps_data_file:dir rw_dir_perms;
 allow meta_tst mnld_exec:file { execute read open };
 allow meta_tst mnld_exec:file execute_no_trans;
 allow meta_tst stpgps_device:chr_file { open read write ioctl };
-allow meta_tst mnld_prop:property_service set;
 allow meta_tst mnld_data_file:file create_file_perms;
 allow meta_tst mnld_data_file:dir rw_dir_perms;
+set_prop(meta_tst, mnld_prop)
 
 # For GPS
 allow meta_tst port:tcp_socket { name_connect name_bind };
@@ -38,10 +38,8 @@ allow meta_tst self:tcp_socket { create connect setopt bind };
 allow meta_tst self:tcp_socket { bind setopt listen accept read write };
 allow meta_tst node:tcp_socket node_bind;
 
-
 allow meta_tst sysfs:file write;
 
-allow meta_tst powerctl_prop:property_service set;
-unix_socket_connect(meta_tst, property, init)
+set_prop(meta_tst, powerctl_prop)
 
 allow meta_tst self:capability { net_raw chown fsetid sys_nice net_admin fowner dac_override sys_admin };

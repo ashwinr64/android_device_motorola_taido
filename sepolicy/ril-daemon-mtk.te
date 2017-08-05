@@ -13,9 +13,19 @@ allow ril-daemon-mtk self:udp_socket create_socket_perms;
 allow ril-daemon-mtk self:capability { setuid net_admin net_raw };
 
 allow ril-daemon-mtk radio_device:dir search;
-allow ril-daemon-mtk radio_prop:property_service set;
 
-allow ril-daemon-mtk ctl_muxreport-daemon_prop:property_service set;
-allow ril-daemon-mtk ril_mux_report_case_prop:property_service set;
+allow ril-daemon-mtk proc_lk_env:file r_file_perms;
+allow ril-daemon-mtk sysfs_ccci:dir search;
+allow ril-daemon-mtk sysfs_ccci:file { open read };
 
-unix_socket_connect(ril-daemon-mtk, property, init)
+# Rw perms for /misc
+allow ril-daemon-mtk para_device:blk_file rw_file_perms;
+
+# FIXME: Allow read from /proc/cmdline
+allow ril-daemon-mtk proc:file r_file_perms;
+
+set_prop(ril-daemon-mtk, radio_prop)
+set_prop(ril-daemon-mtk, ctl_muxreport-daemon_prop)
+set_prop(ril-daemon-mtk, ril_mux_report_case_prop)
+set_prop(ril-daemon-mtk, nvram_prop)
+

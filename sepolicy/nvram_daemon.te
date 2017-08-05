@@ -15,7 +15,14 @@ allow nvram_daemon gsensor_device:chr_file r_file_perms;
 allow nvram_daemon msensor_device:chr_file r_file_perms;
 
 allow nvram_daemon proinfo_device:blk_file rw_file_perms;
-allow nvram_daemon nvram_prop:property_service set;
-allow nvram_daemon wmt_prop:property_service set;
 
-unix_socket_connect(nvram_daemon, property, init)
+# nvram_daemon copies /fstab.mt6735 into nvdata
+r_dir_file(nvram_daemon, rootfs)
+allow nvram_daemon shell_exec:file r_file_perms;
+allow nvram_daemon toolbox_exec:file { execute execute_no_trans getattr open read };
+
+allow nvram_daemon sysfs_boot_mode:file r_file_perms;
+
+set_prop(nvram_daemon, nvram_prop)
+set_prop(nvram_daemon, wmt_prop)
+

@@ -15,3 +15,8 @@ allow system_server wmtWifi_device:chr_file w_file_perms;
 
 # MTKLogger
 allow system_server mtklogger_data_file:dir { search getattr };
+
+# Access to sysfs
+allow system_server sysfs_h2w_state:file r_file_perms;
+
+set_prop(system_server, wmt_prop)

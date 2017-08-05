@@ -4,3 +4,9 @@ allow bluetooth stpbt_device:chr_file rw_file_perms;
 # Allow nvram access
 allow bluetooth nvdata_file:dir search;
 allow bluetooth nvdata_file:file rw_file_perms;
+
+allow bluetooth sysfs_boot_mode:file r_file_perms;
+
+# getprop and setprop on nvram_prop and wmt_prop
+set_prop(bluetooth, nvram_prop)
+set_prop(bluetooth, wmt_prop)

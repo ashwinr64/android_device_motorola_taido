@@ -75,7 +75,6 @@ on charger
 on fs
     write /proc/bootprof "INIT:Mount_START"
     mount_all /fstab.mt6735
-    exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/userdata
     write /proc/bootprof "INIT:Mount_END"
 
 on fs
@@ -1039,15 +1038,15 @@ on property:service.pppoe_wlan0.enable=1
     write /proc/sys/net/ipv4/tcp_rto_min 400
     write /proc/sys/net/ipv4/tcp_early_retrans 0
 
-service DMAgent /system/bin/dm_agent_binder
-    class main
-    user system
-    group system cache
+#service DMAgent /system/bin/dm_agent_binder
+#    class main
+#    user system
+#    group system cache
 
-service PPLAgent /system/bin/ppl_agent
-    class main
-    user system
-    group system cache
+#service PPLAgent /system/bin/ppl_agent
+#    class main
+#    user system
+#    group system cache
 
 
 service cmmb /system/bin/cmmbsp

@@ -2,3 +2,6 @@ genfscon  proc  /driver/thermal  u:object_r:proc_thermal:s0
 genfscon  proc  /driver/wmt      u:object_r:proc_wmt:s0
 genfscon  proc  /mtkcooler       u:object_r:proc_mtkcooler:s0
 genfscon  proc  /mtktz           u:object_r:proc_mtktz:s0
+genfscon  proc  /mtk_mira        u:object_r:proc_pq:s0
+genfscon  proc  /lk_env          u:object_r:proc_lk_env:s0
+genfscon  proc  /xlog            u:object_r:proc_xlog:s0

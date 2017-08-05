@@ -8,3 +8,5 @@ allow wifi2agps agpsd_data_file:dir search;
 allow wifi2agps agpsd:unix_dgram_socket sendto;
 allow wifi2agps self:netlink_socket create_socket_perms;
 
+allow wifi2agps proc_net:file r_file_perms;
+

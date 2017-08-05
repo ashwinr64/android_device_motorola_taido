@@ -21,6 +21,7 @@ type accdet_device, dev_type;
 type devmap_device, dev_type;
 type fm_device, dev_type;
 type Vcodec_device, dev_type;
+type otp_device, dev_type;
 
 # Block devices
 type proinfo_device, dev_type;
@@ -28,4 +29,6 @@ type nvram_device, dev_type;
 type nvdata_device, dev_type;
 type protect1_device, dev_type;
 type protect2_device, dev_type;
+type persist_device, dev_type;
+type para_device, dev_type;
 type mmc_device, dev_type;

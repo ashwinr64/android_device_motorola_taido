@@ -1,0 +1,6 @@
+allow cameraserver camera_device:chr_file rw_file_perms;
+allow cameraserver sysfs_boot_mode:file r_file_perms;
+
+r_dir_file(cameraserver, nvdata_file)
+get_prop(cameraserver, nvram_prop)
+

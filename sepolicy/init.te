@@ -7,3 +7,6 @@ allow init protect1_device:blk_file write;
 allow init protect2_device:blk_file write;
 
 allow init device:lnk_file create_file_perms;
+
+allow init tmpfs:lnk_file create;
+

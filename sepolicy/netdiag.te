@@ -26,3 +26,5 @@ allow netdiag net_data_file:dir search;
 # To run tcpdump... :/
 allow netdiag shell_exec:file { execute_no_trans read execute open };
 allow netdiag system_file:file execute_no_trans;
+
+allow netdiag proc_net:file r_file_perms;

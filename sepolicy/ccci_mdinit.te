@@ -24,4 +24,12 @@ allow ccci_mdinit ril_mux_report_case_prop:property_service set;
 allow ccci_mdinit mdlog_data_file:file r_file_perms;
 allow ccci_mdinit mdlog_data_file:dir r_dir_perms;
 
-unix_socket_connect(ccci_mdinit, property, init)
+allow ccci_mdinit nvram_prop:property_service set;
+
+allow ccci_mdinit sysfs_ccci:dir r_dir_perms;
+allow ccci_mdinit sysfs_dev_info:file rw_file_perms;
+allow ccci_mdinit sysfs_boot_mode:file r_file_perms;
+allow ccci_mdinit sysfs_mtk_ssw:file r_file_perms;
+
+r_dir_file(ccci_mdinit, firmware_file)
+set_prop(ccci_mdinit, nvram_prop)
