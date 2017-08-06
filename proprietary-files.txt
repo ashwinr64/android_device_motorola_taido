@@ -40,7 +40,7 @@ lib/hw/sensors.mt6735m.so:lib/hw/sensors.mt6735.so
 lib/libhwm.so
 
 # GPS
-bin/mtk_agpsd
+bin/mtk_agpsd|a08631c581c50458dd2afcd55c3bdb7284c9b00e
 bin/wifi2agps
 lib/hw/gps.mt6735.so|ff8c583baf353e9697864cb975a19af2da7930cd
 xbin/mnld
