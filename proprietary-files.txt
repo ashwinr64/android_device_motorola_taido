@@ -219,7 +219,6 @@ lib/libmrdump.so
 lib/libperfservice.so
 lib/libperfservicenative.so
 lib/libshowlogo.so
-lib/libxlog.so|a88f905776f943f223cc91b7d078ebb0429012d0
 xbin/BGW
 
 # Widevine

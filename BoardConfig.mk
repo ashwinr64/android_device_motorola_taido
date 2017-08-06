@@ -120,8 +120,8 @@ BOARD_RIL_CLASS := ../../../device/motorola/taido/ril
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
-# Symbols
-TARGET_LDPRELOAD += libxlog.so:libmtk_symbols.so
+# Symbols for Mediatek
+LINKER_FORCED_SHIM_LIBS := /system/lib/libmedia.so|libshims_audio.so:/system/lib/libc.so|libshims_bionic.so:/system/lib/libgui.so|libshims_gui.so:/system/lib/libui.so|libshims_ui.so:/system/lib/liblog.so|libshims_xlog.so
 
 # TWRP
 ifeq ($(WITH_TWRP),true)

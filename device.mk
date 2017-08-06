@@ -95,9 +95,13 @@ PRODUCT_COPY_FILES += \
 # Graphics
 MTK_GPU_VERSION := mali midgard r7p0
 
-# libmtk_symbols
+# Symbols for Mediatek
 PRODUCT_PACKAGES += \
-    libmtk_symbols
+    libshims_audio \
+    libshims_bionic \
+    libshims_gui \
+    libshims_ui \
+    libshims_xlog
 
 # Power
 PRODUCT_PACKAGES += \
@@ -180,4 +184,3 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.allow.mock.location=1 \
     ro.adb.secure=0 \
     persist.sys.usb.config=adb
-
