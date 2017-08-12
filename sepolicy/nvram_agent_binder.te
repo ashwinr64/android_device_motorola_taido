@@ -4,3 +4,5 @@ type nvram_agent_binder, domain;
 init_daemon_domain(nvram_agent_binder)
 
 allow nvram_agent_binder servicemanager:binder { call transfer };
+allow nvram_agent_binder nvram_agent_service:service_manager add;
+
