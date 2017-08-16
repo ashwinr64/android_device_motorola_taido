@@ -2,7 +2,7 @@ type nvram_agent_binder_exec, exec_type, file_type;
 type nvram_agent_binder, domain;
 
 init_daemon_domain(nvram_agent_binder)
-
-allow nvram_agent_binder servicemanager:binder { call transfer };
 allow nvram_agent_binder nvram_agent_service:service_manager add;
 
+binder_use(nvram_agent_binder)
+binder_service(nvram_agent_binder)

@@ -1,3 +1,0 @@
-allow servicemanager nvram_agent_binder:process getattr;
-r_dir_file(servicemanager, nvram_agent_binder)
-
