@@ -98,9 +98,6 @@ MTK_HWC_VERSION := 1.4.1
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_taido
-
 # libc with GCC
 TARGET_NEEDS_GCC_LIBC := true
 

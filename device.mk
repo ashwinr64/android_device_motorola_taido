@@ -26,9 +26,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-# This one is set by init
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
@@ -69,8 +66,6 @@ PRODUCT_PACKAGES += \
     libtinymix \
     libtinyxml \
     libfs_mgr
-
-PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_device.xml:system/etc/audio_device.xml
